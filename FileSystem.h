@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <vector>
 #include "Directory.h"
@@ -18,12 +19,13 @@ public:
 
     void mkdir(const std::string& path);
     void touch(const std::string& path);
-    void ls(const std::string& path = "");
+    void ls();
     void cd (const std::string& path);
     void pwd() const;
     void rm(const std::string& path);
     void cat(const std::string& path);
     void write(const std::string& path,const std::string& data);
+    void tree() const;
 
 private:
     Node* resolvePath(const std::string& path);

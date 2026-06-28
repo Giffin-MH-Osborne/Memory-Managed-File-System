@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <vector>
 #include "Node.h"
@@ -27,4 +28,6 @@ public:
 
     Node* findChild(const std::string& name) const;
     void removeChild(const std::string& name);
+    void listChildren() const;
+    void tree(int depth = 0) const;
 };
